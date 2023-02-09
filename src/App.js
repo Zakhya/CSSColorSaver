@@ -8,7 +8,7 @@ import { useState } from 'react'
 function App() {
   const [colorValues, setSquareColor] = useState('')
   const [currentColor, setCurrentColor] = useState('')
-const [newColor, setNewColor] = useState(JSON.parse(localStorage.getItem('colorList')))
+const [newColor, setNewColor] = useState(JSON.parse(localStorage.getItem('colorList')) || [{ id:1, color:'red'}])
 
   const addColor = (color) => {
     const id = newColor.length ? newColor[newColor.length - 1].id + 1 : 1;
