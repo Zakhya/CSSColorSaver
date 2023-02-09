@@ -7,7 +7,7 @@ const ColorList = ({ handleDelete, newColor, setSquareColor }) => {
         <ul>
             {newColor.map((color) => (
             <li className="color" key={color.id}>
-            <p onClick={() => setSquareColor(color.color)}>{color.color}</p>
+            <p className= "listItem" onClick={() => setSquareColor(color.color)}>{color.color}</p>
             <button className="delete" onClick={() => handleDelete(color.id)}>Delete</button>
             </li>
         ))}
